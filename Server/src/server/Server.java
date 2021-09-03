@@ -48,6 +48,7 @@ public class Server {
         String msg = input.readUTF();
         System.out.println("Mensagem Recebida...");
         output.writeUTF("Hello World!");
+        output.flush();
         
            //4.1 - Fechar streams de entrada e saida
            input.close();
@@ -55,6 +56,8 @@ public class Server {
         
         } catch(IOException e){
             //TRATAMENTO DE FALHAS
+            System.out.println("Proclema no tratamento da conexão com o cliente: " + socket.getInetAddress());
+            System.out.println("Erro: " + e.getMessage());
         }finally{
             //Final do tratamento do protocolo                                   
             //4.2 - Fechar socket de comunicação entre servidor/cliente;
@@ -70,7 +73,7 @@ public class Server {
         System.out.println("Aguardando Conexão...");
         server.criarServerSocket(5555);                
         Socket socket = server.esperaConexao(); //protocolo
-        System.out.println("Clinte Conectado...");
+        System.out.println("Cliente Conectado...");
         server.trataConexao(socket);
         System.out.println("Cliente Finalizado...");
         
