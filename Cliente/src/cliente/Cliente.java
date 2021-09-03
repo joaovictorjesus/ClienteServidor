@@ -33,7 +33,8 @@ public class Cliente {
             output.writeUTF(msg);
             output.flush(); //libera buffer para envio
             
-            System.out.println("**");
+            System.out.println(msg);
+            System.out.println("Mensagem enviada com sucesso!");
             
             msg = input.readUTF();
             System.out.println("RESPOSTA: " + msg);
