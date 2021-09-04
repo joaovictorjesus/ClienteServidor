@@ -29,7 +29,7 @@ public class Cliente {
             ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream() );*/
             
             System.out.println("Enviando mensagem...");
-            String msg = "Hello";
+            String msg = "Que horas são?";
             output.writeUTF(msg);
             output.flush(); //libera buffer para envio
             

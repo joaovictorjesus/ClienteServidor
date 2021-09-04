@@ -5,12 +5,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Server {
-       /* 2.1 - Criar uma nova conexão;                        
-          5 - Voltar para o passo 2, até que finalize o programa;
-          6 - Fechar o ServerSocket
-        */
         
     private ServerSocket serverSocket;
         //1 - Criar o servidor de conexões;
@@ -45,9 +44,20 @@ public class Server {
             Server <-  "Hello World" */
         
         //4 - Tratar a conversação entre clientes e servidor(tratar protocolo);
-        String msg = input.readUTF();
+        /*
+        Date data = new Date();        
+        SimpleDateFormat formatar = new SimpleDateFormat();
+        String dataFormatada = formatar.format(data);
+        System.out.println(dataFormatada);
+        */
+        
+        Date data = new Date();
+        SimpleDateFormat formatar = new SimpleDateFormat();
+        String dataFormatada = formatar.format(data);
+        
+        String msg = input.readUTF();        
         System.out.println("Mensagem Recebida...");
-        output.writeUTF("Hello World!");
+        output.writeUTF(dataFormatada);
         output.flush();
         
            //4.1 - Fechar streams de entrada e saida
