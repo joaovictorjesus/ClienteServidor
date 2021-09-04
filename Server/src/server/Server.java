@@ -44,12 +44,6 @@ public class Server {
             Server <-  "Hello World" */
         
         //4 - Tratar a conversação entre clientes e servidor(tratar protocolo);
-        /*
-        Date data = new Date();        
-        SimpleDateFormat formatar = new SimpleDateFormat();
-        String dataFormatada = formatar.format(data);
-        System.out.println(dataFormatada);
-        */
         
         Date data = new Date();
         SimpleDateFormat formatar = new SimpleDateFormat();
