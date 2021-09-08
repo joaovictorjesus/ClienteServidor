@@ -6,7 +6,6 @@ import java.io.ObjectOutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 public class Server {
@@ -50,7 +49,7 @@ public class Server {
         String dataFormatada = formatar.format(data);
         
         String msg = input.readUTF();        
-        System.out.println("Mensagem Recebida...");
+        System.out.println("Solicitação Recebida...");
         output.writeUTF(dataFormatada);
         output.flush();
         

@@ -28,7 +28,7 @@ public class Cliente {
             /*ObjectInputStream input = new ObjectInputStream(socket.getInputStream() );
             ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream() );*/
             
-            System.out.println("Enviando mensagem...");
+            System.out.println("Enviando solicitação...");
             String msg = "Que horas são?";
             output.writeUTF(msg);
             output.flush(); //libera buffer para envio
